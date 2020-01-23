@@ -1,0 +1,26 @@
+<p style="color:lightblue;text-align:center">
+  Home works!
+</p>
+<h4>{{sample}}</h4>
+
+<input type="text" name="data1" [(ngModel)]="data1" class="form-control" (input)="display()">
+<h4>{{returnMsg}}</h4>
+
+<h5>{{data}}</h5>
+<button class="btn btn-primary" (click)="display()">Click</button>
+<br><br>
+<button  class="btn btn-success" [disabled]="bt" >Success</button>
+<br><br>
+<button  class="btn btn-danger" (click)="show()" >Show more</button>
+<br><br>
+<h3 [ngStyle]="{backgroundColor:getColor()}" [ngClass]="{hot:temperature=='hot',cold:temperature=='cold'}">This is  for testing</h3>
+
+<div *ngIf="showMsg">
+  Tipu Sultan (born Sultan Fateh Ali Sahab Tipu, 20 November 1750 – 4 May 1799), also known as Tipu Sahab or the Tiger of Mysore, was a ruler of the Kingdom of Mysore and a pioneer of rocket artillery. He introduced a number of administrative innovations during his rule, including a new coinage system and calendar, and a new land revenue system which initiated the growth of the Mysore silk industry. He expanded the iron-cased Mysorean rockets and commissioned the military manual Fathul Mujahidin. He deployed the rockets against advances of British forces and their allies during the Anglo-Mysore Wars, including the Battle of Pollilur and Siege of Seringapatam. He also embarked on an ambitious economic development program that established Mysore as a major economic power, with some of the world's highest real wages and living standards in the late 18th century.
+</div>
+<br><br>
+<input type="text"  [(ngModel)]="myServer" class="form-control">
+<br><br>
+<button  class="btn btn-warning" (click)="addElement()" >Add Element</button>
+<br><br>
+<h3 *ngFor="let server of servers">{{server}}</h3>
