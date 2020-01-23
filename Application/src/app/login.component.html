@@ -1,0 +1,2 @@
+<input type="text" class="form-control" [(ngModel)]="password" placeholder="Password" (input)="strength()">{{errorMessage}}<br>
+<input type="text" class="form-control" [(ngModel)]="cpassword" placeholder="Confirm Password" (input)="match()">{{secondMessage}}
