@@ -1,0 +1,29 @@
+<p>
+  databinding works!
+</p>
+
+<h2> DataBinding Assignment 1</h2>
+
+<div class="form-group">
+  <label for=""> Enter Book Name to Search</label>
+  <input type ="text" class="form-control" [(ngModel)] ="bookName">
+</div>
+<b>You are searching for {{bookName}}</b>
+<br> 
+ 
+
+<h2> Databinding Assignment 2 </h2>
+
+<input type="text" class="form-control" placeholder="Enter your age" [(ngModel)]="age">
+<br>
+<button class="btn btn-primary" (click)="ageCalculator()"> Show me Year</button>&nbsp;
+<b> Your were born in {{year}}</b>
+<br> 
+<h2>DataBinding Assignment 3</h2>
+<div class="form-group">
+  <label for="">Change Color</label>
+  <input type="text" class="form-control" [(ngModel)] ="myColor">
+</div>
+
+<div [ngStyle] ="{color:myColor}"> Paint the Town {{myColor}}</div> 
+ 
