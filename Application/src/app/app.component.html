@@ -8,8 +8,14 @@
     <option value="Chennai">Chennai</option>
 </select>
 <hr>
-<!--<app-server [locationName]="lName"></app-server>-->
-<app-home (OnRegister)="register($event)"></app-home>
+<!--<app-server ([locationName]="lName")></app-server>
+<app-home (OnRegister)="register($event)"></app-home>-->
+
+<app-server (sendpriceEvent)="setTotalPrice($event)"></app-server>
+
+Total Price is :{{totalPrice}}
+
+<div class ="text-success" *ngIf="totalPrice>100000">You are eligible for discount!</div>
 <br>
 
 <!--<app-databinding></app-databinding>-->
