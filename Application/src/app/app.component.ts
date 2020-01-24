@@ -8,7 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Application';
   courseName;
+  colorname;
   register(course){
 this.courseName=course;
   }
+colorSet(){
+  this.colorname=this.courseName;
+}
+
 }
