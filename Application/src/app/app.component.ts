@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Application';
+  courseName;
+  register(course){
+this.courseName=course;
+  }
 }
