@@ -27,3 +27,18 @@
 
 <div [ngStyle] ="{color:myColor}"> Paint the Town {{myColor}}</div> 
  
+<h1>Pipes</h1>
+<h2>Assignment 1</h2>
+<b>Product Price:{{217021|currency:currencyCode}}</b>&nbsp;
+<button class="btn btn-primary" (click)="currencyCode='USD'">USD</button>&nbsp;
+<button class="btn btn-primary" (click)="currencyCode='CAD'">CAD</button>
+
+<h1>Pipes</h1>
+<h2>Assignment 2</h2><br>
+<b>Product Price:{{ "6/2/2017" | date }} </b>&nbsp;<br>
+<b>{{ 250000 | currency:'CAD'}}</b> &nbsp;<br>
+<b>{{ "6/2/2017, 11:30:45 AM" | date:'medium' }}</b>&nbsp;<br>
+<b>{{ 0.1 | percent }}</b>&nbsp;<br>
+<b>{{ 'Laptop Charger'| slice:3:6}}</b>&nbsp;<br>
+<b>{{ 25000 | number:'.3-5' }}</b>&nbsp;<br>
+<b>{{ "6/2/2017, 11:30:45 AM" | date:'mmss' }}</b>&nbsp;<br>
