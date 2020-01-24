@@ -1,5 +1,16 @@
 <div class="container">
 <h1 style="color:white;text-shadow:5px 5px 5px red;text-align:center"> Welcome {{courseName}}</h1>
+<h2 (click)="colorSet()" [ngStyle]="{color:colorname}">Hello Everyone</h2>
 
+<select (change)="lName=val.value" #val>
+    <option value="Bangalore">Bangalore</option>
+    <option value="Hyderabad">Hyderabad</option>
+    <option value="Chennai">Chennai</option>
+</select>
+<hr>
+<!--<app-server [locationName]="lName"></app-server>-->
 <app-home (OnRegister)="register($event)"></app-home>
+<br>
+
+<!--<app-databinding></app-databinding>-->
 </div>
