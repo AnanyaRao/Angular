@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit {
    console.log(this.loggingservice.getLogging());
  }
 
- registration(courseName){
-this.OnRegister.emit(courseName)
+ registration(color){
+this.OnRegister.emit(color)
  }
 }
