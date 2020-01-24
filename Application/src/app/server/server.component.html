@@ -1,0 +1,28 @@
+<p>
+  server works! {{SelectedLocation}}
+</p>
+<table class="container table table-bordered">
+  <tr *ngFor = "let p of productArr">
+    <td>
+      <button (click) = "deletedProduct(p)">Deleted</button>
+    </td>
+    <td>
+      {{p.productId}}
+    </td>
+    <td>
+      {{p.productType}}
+    </td>
+    <td>
+      {{p.productPrice}}
+    </td>
+    <td>
+      <input type="number" [(ngModel)]="p.productQuantity" (change)="onQuantityChange(p)">
+    </td>
+    <td class="text-danger" *ngIf="p.productQuantity==null">
+      Please Enter Quantity
+    </td>
+    
+  </tr>
+</table>
+
+  
