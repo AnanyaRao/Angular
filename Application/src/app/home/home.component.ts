@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter  } from '@angular/core';
 import {NgModule} from '@angular/core';
 import { ServiceService } from '../service.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -20,7 +21,7 @@ export class HomeComponent implements OnInit {
     //loggingservice = new ServiceService(); 
     //color;
   constructor(private loggingservice:ServiceService) { }
-
+  @Output() OnRegister = new EventEmitter();
   ngOnInit() {
    // this.temperature = Math.random();
     if(Math.random()>0.5){
@@ -57,5 +58,9 @@ export class HomeComponent implements OnInit {
   }
  getDetails(){
    console.log(this.loggingservice.getLogging());
+ }
+
+ registration(courseName){
+this.OnRegister.emit(courseName)
  }
 }
