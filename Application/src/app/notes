@@ -1,0 +1,10 @@
+
+
+
+1) create an HTML element in component.html file for invoking a function to corresponding component.ts file
+
+2) in component.ts file create the function which will invoke the method in service.ts file 
+
+3) in service.ts file make use of httpClient to connect to backend by sending a get or post request.
+                   add HttpClientModule in imports of app.module.ts  
+ 
