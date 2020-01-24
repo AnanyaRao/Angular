@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NgModule} from '@angular/core';
+import { ServiceService } from '../service.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -16,8 +17,9 @@ export class HomeComponent implements OnInit {
     servers = ["Server1","Server2","Server3"];
     myServer:string;
     temperature;
+    //loggingservice = new ServiceService(); 
     //color;
-  constructor() { }
+  constructor(private loggingservice:ServiceService) { }
 
   ngOnInit() {
    // this.temperature = Math.random();
@@ -53,5 +55,7 @@ export class HomeComponent implements OnInit {
     }
     return this.returnMsg;
   }
- 
+ getDetails(){
+   console.log(this.loggingservice.getLogging());
+ }
 }
