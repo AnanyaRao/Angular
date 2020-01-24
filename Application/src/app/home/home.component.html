@@ -2,10 +2,27 @@
   Home works!
 </p>
 <h4>{{sample}}</h4>
-
+<br>
 <input type="text" name="data1" [(ngModel)]="data1" class="form-control" (input)="display()">
-<h4>{{returnMsg}}</h4>
+<h5>{{data1|sort}}</h5>
+<br>
+<input type="text" name="data2" [(ngModel)]="data2" class="form-control" (input)="display()">
+<br>
+<select [(ngModel)] = "selVal" class ="form-control" >
+  <option value="number">Number</option>
+  <option value="string">String</option>
+</select>
 
+<h2>{{data2|sort:selVal}}</h2>
+
+<h4>{{returnMsg}}</h4><br>
+
+<button class="btn btn-danger" (click)="registration('red')">Red</button>
+<br><br>
+<button  class="btn btn-primary" (click)="registration('blue')" >Blue</button>
+<br><br>
+<button  class="btn btn-success" (click)="registration('green')" >Green</button>
+<br><br>
 <h5>{{data}}</h5>
 <button class="btn btn-primary" (click)="display()">Click</button>
 <br><br>
