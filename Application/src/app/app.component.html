@@ -1,5 +1,5 @@
 <div class="container">
-<h1 style="color:white;text-shadow:5px 5px 5px red;text-align:center"> Welcome</h1>
+<h1 style="color:white;text-shadow:5px 5px 5px red;text-align:center"> Welcome {{courseName}}</h1>
 
-<app-home></app-home>
+<app-home (OnRegister)="register($event)"></app-home>
 </div>
